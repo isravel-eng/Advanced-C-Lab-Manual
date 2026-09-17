@@ -1,21 +1,22 @@
-EXP NO:1 C PROGRAM FOR ARRAY OF STRUCTURE TO CHECK ELIGIBILITY FOR THE VACCINE.
+# ADVANCED C LAB — MODULE 7
 
-Aim:
-To write a C program for array of structure to check eligibility for the vaccine person age above 6 years of age.
+---
 
-Algorithm:
-1. Declare structure eligible with age (integer) and n (character array)
-2. Declare variable e of type eligible
-3. Input age and name using scanf, store in e
-4. If e.age <= 6
-- Print "Vaccine Eligibility: No"
-Else
-- Print "Vaccine Eligibility: Yes"
-5. Print details (e.age, e.n)
-6. Return 0
- 
-Program:
+# EXPERIMENT 1 — ARRAY OF STRUCTURE TO CHECK VACCINE ELIGIBILITY
 
+## Aim
+To write a C program using an array of structures to check vaccine eligibility for a person whose age is above 6 years.
+
+## Algorithm
+1. Declare a structure `eligible` with `age` and `n` members.
+2. Declare a variable `e` of type `eligible`.
+3. Input the name and age using `scanf()`.
+4. If `e.age <= 6`, print **Vaccine Eligibility: No**.
+5. Otherwise, print **Vaccine Eligibility: Yes**.
+6. Display the name and age.
+7. Return 0.
+
+## Program
 ```c
 #include <stdio.h>
 
@@ -33,8 +34,7 @@ int main(void) {
 }
 ```
 
-Output:
-
+## Output
 ```text
 Ram 25
 Name: Ram
@@ -42,26 +42,26 @@ Age: 25
 Vaccine Eligibility: Yes
 ```
 
-Result:
-Thus, the program is verified successfully. 
+## Result
+Thus, the program is verified successfully.
 
+---
 
+# EXPERIMENT 2 — PASSING STRUCTURES AS FUNCTION ARGUMENTS AND RETURNING A STRUCTURE
 
-EXP NO:2 C PROGRAM FOR PASSING STRUCTURES AS FUNCTION ARGUMENTS AND RETURNING A STRUCTURE FROM A FUNCTION
-Aim:
-To write a C program for passing structure as function and returning a structure from a function
+## Aim
+To write a C program for passing a structure as a function argument and returning a structure from a function.
 
-Algorithm:
-1. Define structure numbers with members a and b.
-2. Declare variable n of type numbers.
-3. Prompt the user to enter values for a and b.
-4. Input values for a and b into n using scanf.
-5. Call the add function with n as an argument.
-6. Print the result returned by the add function.
-7. Return 0
- 
-Program:
+## Algorithm
+1. Define structure `numbers` with members `a` and `b`.
+2. Declare variable `n` of type `numbers`.
+3. Input values for `a` and `b`.
+4. Pass `n` to the `add()` function.
+5. Add the two values inside the function.
+6. Return the resulting structure.
+7. Print the result.
 
+## Program
 ```c
 #include <stdio.h>
 
@@ -83,36 +83,34 @@ int main(void) {
 }
 ```
 
-Output:
-
+## Output
 ```text
 10 20
 Sum = 30
 ```
 
-Result:
-Thus, the program is verified successfully
+## Result
+Thus, the program is verified successfully.
 
+---
 
- 
-EXP.NO:3 C PROGRAM TO READ A FILE NAME FROM USER AND WRITE THAT FILE USING FOPEN()
+# EXPERIMENT 3 — READ A FILE NAME AND WRITE THAT FILE USING FOPEN()
 
-Aim:
-To write a C program to read a file name from user
+## Aim
+To write a C program to read a file name from the user.
 
-Algorithm:
-1. Include the necessary header file stdio.h.
-2. Begin the main function.
-3. Declare a file pointer p and a character array name to store the file name.
-4. Prompt the user to enter a file name and read it using scanf.
-5. Use fopen to open the file in write mode.
-6. Print an error message if fopen fails; otherwise print that the file was opened.
-7. Use fclose to close the file.
+## Algorithm
+1. Include the necessary header file `stdio.h`.
+2. Begin the `main()` function.
+3. Declare a file pointer `p` and a character array `name` to store the file name.
+4. Prompt the user to enter a file name and read it using `scanf()`.
+5. Use `fopen()` to open the file in write mode.
+6. Print an error message if `fopen()` fails; otherwise print that the file was opened.
+7. Use `fclose()` to close the file.
 8. Print a message indicating that the file has been closed.
 9. Return 0.
- 
-Program:
 
+## Program
 ```c
 #include <stdio.h>
 
@@ -135,34 +133,33 @@ int main(void) {
 }
 ```
 
-Output:
-
+## Output
 ```text
 data.txt
 data.txt Opened Successfully
 File Closed Successfully
 ```
 
-Result:
-Thus, the program is verified successfully
- 
+## Result
+Thus, the program is verified successfully.
 
+---
 
-EXP NO:4 PROGRAM TO READ A FILE NAME FROM USER, WRITE THAT FILE AND INSERT TEXT IN TO THAT FILE
-Aim:
-To write a C program to read, a file and insert text in that file
+# EXPERIMENT 4 — READ A FILE NAME, WRITE THE FILE, AND INSERT TEXT
 
-Algorithm:
-1. Include stdio.h.
+## Aim
+To write a C program to read a file and insert text in that file.
+
+## Algorithm
+1. Include `stdio.h`.
 2. Declare a file pointer, file name, text buffer, and number of strings.
 3. Read the file name and number of strings.
 4. Open the file in write mode.
-5. Read each string and write it using fputs.
+5. Read each string and write it using `fputs()`.
 6. Close the file and report success.
 7. Return 0.
- 
-Program:
 
+## Program
 ```c
 #include <stdio.h>
 
@@ -194,8 +191,7 @@ int main(void) {
 }
 ```
 
-Output:
-
+## Output
 ```text
 Enter file name: notes.txt
 Enter number of strings: 2
@@ -204,28 +200,27 @@ File handling
 Data added successfully
 ```
 
-Result:
-Thus, the program is verified successfully
+## Result
+Thus, the program is verified successfully.
 
+---
 
+# EXPERIMENT 5 — DISPLAY STUDENT DETAILS USING STRUCTURE
 
-Ex No 5 : C PROGRAM TO DISPLAY STUDENT DETAILS USING STRUCTURE
+## Aim
+To dynamically allocate memory to store information about multiple subjects, input the details, display the stored information, and free the allocated memory.
 
-Aim:
-The aim of this program is to dynamically allocate memory to store information about multiple subjects (name and marks), input the details for each subject, and then display the stored information. Finally, it frees the allocated memory to prevent memory leaks.
-
-Algorithm:
+## Algorithm
 1. Input the number of subjects.
-2. Read n from the user.
-3. Dynamically allocate memory for n subject structures.
+2. Read `n` from the user.
+3. Dynamically allocate memory for `n` subject structures.
 4. If allocation fails, display an error and terminate.
 5. Read each subject name and marks.
 6. Display all subject details.
 7. Free the allocated memory.
 8. Return 0.
 
-Program:
-
+## Program
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -262,8 +257,7 @@ int main(void) {
 }
 ```
 
-Output:
-
+## Output
 ```text
 Enter number of subjects: 3
 Enter subject name and marks: C 85
@@ -276,5 +270,5 @@ Maths : 90
 Physics : 88
 ```
 
-Result:
-Thus, the program is verified successfully
+## Result
+Thus, the program is verified successfully.
